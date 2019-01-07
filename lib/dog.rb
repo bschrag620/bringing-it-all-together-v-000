@@ -75,9 +75,7 @@ class Dog
       WHERE name=?
     SQL
     
-    row = DB[:conn].execute(sql, name)[0]
-    binding.pry
-    new_from_db(row)
+    DB[:conn].execute(sql, name)[0]
   end
   
   def self.find_or_create_by(args)
