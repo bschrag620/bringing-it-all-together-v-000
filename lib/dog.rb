@@ -76,7 +76,11 @@ class Dog
     SQL
     
     row = DB[:conn].execute(sql, name)[0]
-    new_from_db(row)
+    if row
+      new_from_db(row)
+    else
+      false
+    end
   end
   
   def self.find_or_create_by(args)
