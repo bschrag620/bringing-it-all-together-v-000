@@ -79,8 +79,8 @@ class Dog
     new_from_db(row)
   end
   
-  def self.find_or_create_by(name:, breed:)
-    found = find_by_name(name)
+  def self.find_or_create_by(args)
+    found = find_by_name(args[:name])
     if found
       found
     else
