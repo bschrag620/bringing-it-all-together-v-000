@@ -85,8 +85,12 @@ class Dog
   
   def self.find_or_create_by(args)
     found = find_by_name(args[:name])
-    if found AND found.breed == args[:breed]
-      found
+    if found
+      if found.breed == args[:breed]
+        found
+      else
+        create(args)
+      end
     else
       create(args)  
     end
