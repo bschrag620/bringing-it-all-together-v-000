@@ -84,7 +84,7 @@ class Dog
     if found
       found
     else
-      create(name: name, breed: breed)  
+      create(args)  
     end
   end
 end
