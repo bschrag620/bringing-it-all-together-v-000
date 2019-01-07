@@ -85,5 +85,6 @@ class Dog
       found
     else
       create(name: name, breed: breed)  
+    end
   end
 end
